@@ -1,0 +1,17 @@
+<div class="countriesContainer">
+    <p class="countryTitle"> Car</p>
+    {{!-- <img class="flags" src = "{{flags.png}}"> --}}
+    
+<label class="OverallRating"> Overall Rating</label>
+<h1 class="info">{{OverallRatin}}</h1>
+<label class="label">Rollover Possibility</label>
+<h2 class="info">{{RolloverPossibilityl}}</h2>
+<label class="label">Model Year</label>
+<h3 class="info">{{ModelYear}}</h3>
+<label class="labels">Make</label>
+<h4 class="info">{{Make}}</h4>
+
+<form action = "/favorite/{{Make}}" method = "post">
+<button>favorite</button>
+</form>
+</div>
