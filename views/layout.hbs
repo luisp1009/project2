@@ -11,7 +11,7 @@
   <body>
      <nav>
   <ul>
-    {{#if isLoggedIn}}
+    {{#if iisAnon}}
     <li><a href="/">Sign up &nbsp;|</a></li>
      {{/if}}
     <li><a href="/cars/create-car">Sell you Car |</a></li>
@@ -19,7 +19,7 @@
     <li><a href="/cars/cars-list">Cars on Sale</a></li>
     
     {{#if isLoggedIn}}
-    <li><a href="/auth/logout">| Logout</a></li>
+    <li><a style="color:white; padding:5px; background-color:#E14D2A;" href="/auth/logout">| Logout</a></li>
     {{/if}}
   </ul>
 </nav>

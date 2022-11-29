@@ -315,3 +315,7 @@ padding-bottom: 200px;
   width: 200px;
   margin-right: 10px;
 }
+
+.carImageOnSale:hover{
+  transform: scale(1.5);
+}
