@@ -1,12 +1,21 @@
-<div class="container">
-    <h1>Profile Page</h1> 
-<p>Username:{{user.userNameInput}}</p>
-    <h1 class="title">Type you car</h1>
 
-<form action = "/searchCar" method = "GET">
-<label>
-<input type="text" class="carInput" name="carYear" placeholder="Enter a car name">
-</label>
+   <h1 class="safetyTitles">SAFETY IS EVERYONE'S RESPONSABILTY</h1>
+<p>FIND OUT HOW SAFE YOUR NEXT CAR IS</p>
+   
+<br>
+<form action = "/auth/searchCar" method = "GET">
+<label for="carMake">Car make</label>
+&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="carMakelInput" name="carMake" placeholder="Example Audi">
+<br><br>
+<label for="carModel">Car model</label>
+&nbsp;&nbsp;&nbsp;<input type="text" class="carModelInput" name="carModel" placeholder="Example A4">
+<br><br>
+<label for="carYear">Car year</label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="carYearInput" name="carYear" placeholder="Example 2019">
+<br><br>
 <button class="searchButton" type= "submit">Search</button>
 </form>
-</div>
+
+<p><a href="/cars/cars-list">Or click here to see your cars</a></p>
+
+

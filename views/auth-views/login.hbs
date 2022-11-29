@@ -1,22 +1,27 @@
-<h1>Log In</h1>
+
+
+
+<h1>LOG IN</h1>
 
 <form action="/auth/login" method="post">
 
 <div>
-    <label for="userName">Username</label>
-    <input type="text" name="userName" id="userName"/>
+    <label for="userName">USERNAME</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="userName" name="userName" id="userName"/>
 </div>
 <br>
 <div>
-    <label for="passwordInput">Password</label>
-    <input type="password" name="password" id="passwordInput"/>
+    <label for="passwordInput">PASSWORD</label>
+   &nbsp;&nbsp;&nbsp;&nbsp; <input type="password" name="password" id="passwordInput"/>
 </div>
 <br>
 
-<button type="submit">Log in</button>
+<button class="loginBtnPage" type="submit">Log in</button>
 
 </form>
-
+<br>
 {{#if message}}
-<p>{{message}}</p>
+<p class="message">{{message}}</p>
 {{/if}}
+
+

@@ -1,0 +1,21 @@
+<div class="carContainer">
+    <p class="title"> Look for your Vehicle ID</p>
+
+
+{{#each carArray}}<br><br>
+<label class="label">Car details</label>
+<h1 class="vehicleID">{{VehicleDescription}}</h1>
+<br>
+<label class="label">Car Id</label>
+<h1 class="vehicleID">{{VehicleId}}</h1>
+<br><br>
+ <a class="carDetails" href="/auth/carDetails/{{VehicleId}}">See Car Details</a>
+<br><br>
+<hr>
+
+{{/each}}
+
+
+
+
+</div>

@@ -1,0 +1,40 @@
+<div class="welcomeContainer"></div>
+<h1>WELCOME</h1>
+
+
+
+<h1 class="signupTitle">SIGN UP</h1>
+
+<form action="/auth/signup" method="post">
+
+<div class="welcomeTitles">
+    <label for="fullNameInput">Full Name</label>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="fullName" name="fullName" id="fullNameInput"/>
+</div>
+<br>
+<div class="welcomeTitles">
+    <label for="emailInput">Email</label>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="email" id="emailInput"/>
+</div>
+<br>
+<div class="welcomeTitles">
+    <label for="userNameInput">Username</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="userName" name="userName" id="userNameInput"/>
+</div>
+<br>
+<div class="welcomeTitles">
+    <label for="passwordInput">Password</label>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password" id="passwordInput"/>
+</div>
+<br>
+
+<button class="signupBtn" type="submit">Sign Up</button>
+{{!-- &ensp;&ensp;<button type="submit"><a class="loginBtn" href="/auth/login">Or Log In</a> </button> --}}
+</form>
+
+<p class="loginBtnText"> <a href="/auth/login">Log In here if you already have an account</a></p>
+
+{{#if message}}
+<p class="message">{{message}}</p>
+{{/if}}
+</div>

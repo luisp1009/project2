@@ -1,0 +1,27 @@
+<h2> Car List </h2>
+<a href="/cars/createcar">ADD CAR</a>
+<div id="listofcars">
+  {{#each myCars}}
+    <div class="listedCar">
+      <div>
+        <h3>{{name}}</h3>
+        <p>{{owner}}</p>
+        <p>{{description}}</p>
+        {{!-- <img src="{{imageUrl}}" alt=""> --}}
+        <form action=""></form>
+      </div>
+      <div>
+        {{#if isMyCar}}
+          <form action="/cars/{{name}}/delete" method="post">
+            <button type="submit"> delete</button>
+
+          </form>
+          <form action="">
+            <button type="button"> edit</button>
+          </form>
+
+        {{/if}}
+      </div>
+    </div>
+  {{/each}}
+</div>

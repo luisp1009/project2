@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/National_Highway_Traffic_Safety_Administration_logo.svg/1280px-National_Highway_Traffic_Safety_Administration_logo.svg.png" alt="" class="logo">
     <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400&display=swap" rel="stylesheet">
   </head>
   <body>
-     <a href="/">Home</a>
-    <a href="/auth/login">Login</a>
-    <a href="/auth/signup">Signup</a>
-    <a href="/auth/logout">Logout</a>
+     <nav>
+  <ul>
+    {{#if isLoggedIn}}
+    <li><a href="/">Sign up &nbsp;|</a></li>
+     {{/if}}
+    <li><a href="/cars/create-car">Sell you Car |</a></li>
+    <li><a href="/cars/search-car">Safety check |</a></li>
+    <li><a href="/cars/cars-list">Cars on Sale</a></li>
+    
+    {{#if isLoggedIn}}
+    <li><a href="/auth/logout">| Logout</a></li>
+    {{/if}}
+  </ul>
+</nav>
+
     {{{body}}}
-    <script src="/js/script.js"></script>
+
+   {{!-- <script src="/js/script.js"></script> --}}
   </body>
 </html>
+
+
+

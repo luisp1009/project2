@@ -1,0 +1,42 @@
+{{#if message}}
+    <h3 class="message">{{message}}</h3>
+{{/if}}
+<p><b style="color:#E14D2A ;">NOTE: You are only allow to edit and remove cars you added </b></p>
+<p class="loginBtnText"> <a href="/auth/login"><span style="color: #E14D2A">LOG IN HERE </span>first in order to update you cars </a></p>
+<br>
+
+{{#each foundCars}}
+<div class="garagecarInfo">
+    <h2 class="carMakeGarage">{{make}} </h2>
+    <p class="carModelGarage" >{{year}}</p>
+    <p class="carModelGarage" >&nbsp;{{model}}</p>
+    <br>
+    </div>
+    <div class="carImages">
+    <img class="carImageOnSale" src="{{imageUrl}}" alt="car image">
+    <img class="carImageOnSale" src="{{imageUrl1}}" alt="car image">
+    <img class="carImageOnSale" src="{{imageUrl2}}" alt="car image">
+</div>
+<div class="description1"> <p class="carDescriptionGarage" >{{details}}</p></div>
+    {{#each reviews}}
+        <h4>{{user.fullName}}</h4>
+        <p>- {{comment}}</p>
+        <br>
+    {{/each}}
+<div class="reviewsForm">
+    <form action="/reviews/{{_id}}/add-reviews" method="get">
+        <button class="reviewBtn">Add Review</button>
+    </form>
+
+    <form action="/cars/{{_id}}/edit-car" method="get">
+        <button class="reviewBtn" type="submit">Edit</button>
+    </form>
+
+    <form action="/cars/{{_id}}/delete-car" method="post">
+        <button class="reviewBtn" type="submit">Delete</button>
+    </form>
+    </div>
+<br><br><br>
+<hr style="width: 200px;" >
+<br>
+{{/each}}

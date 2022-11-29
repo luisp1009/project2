@@ -1,8 +1,317 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: linear-gradient(to bottom, #051937, #00456e, #007693, #00a99a, #36d986);
+  display: flex;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100%;
+  margin: 0;
+  
+ 
 }
 
-a {
-  color: #00B7FF;
+html{
+  /* background-image: linear-gradient(to right, #253186, #00509b, #006aa1, #00809b, #009493, #139f8c, #37a97f, #59b16f, #67b45e, #79b74b, #8db835, #a3b816);
+  background-position:center;*/
+  padding-bottom: 100%; 
+  margin: 0;
+}
+
+nav {
+ align-items: center;
+ display: flex;
+ justify-content: center;
+}
+
+nav ul{
+  padding: 0;
+  display: flex;
+  justify-content:space-around;
+  margin-left: 10px;
+}
+
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin-right: 10px;
+ 
+
+}
+
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  text-transform: uppercase; 
+  text-decoration: none;
+}
+
+a:hover{
+  background-color: #3E6D9C;
+  padding: 5px;
+}
+
+
+.welcomeTitles{
+  font-size: 1rem;
+}
+
+h1{
+  color:#E14D2A;
+  font-size: 2rem;
+}
+
+.signupTitle{
+  margin-top:50px;
+}
+
+p{
+  color: white;
+}
+
+label{
+  color: white;
+}
+
+.signupBtn{
+  margin-left:190px;
+  background-color: #E14D2A;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  
+}
+
+.signupBtn1{
+  margin-left:170px;
+  background-color: #E14D2A;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  
+}
+
+.loginBtnText{
+  margin-top: 50px;
+  text-decoration: none;
+  
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+.loginBtnPage{
+  margin-left:188px;
+  background-color: #E14D2A;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+}
+
+.createBtn{
+ float: right;
+  background-color: #E14D2A;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+
+}
+
+.searchButton{
+  margin-left:180px;
+  background-color: #E14D2A;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  float: right;
+
+}
+
+.logo{
+  width:250px;
+}
+
+.carIdBtn{
+  margin-left:365px;
+  background-color: #E14D2A;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+}
+.title{
+  font-size: 20px;
+  color: #E14D2A;;
+}
+
+.vehicleID{
+  font-size: 20px;
+  color: white;
+}
+
+.carDetails{
+  background-color: #E14D2A;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+}
+
+.message{
+  color: #E14D2A;
+}
+
+.carImage{
+  width: 20rem;
+}
+
+.ratingsContainer{
+ display: flex;
+ justify-content:space-between;
+}
+
+.carSafetyResults{
+  font-size: 20px;
+}
+
+.safetyContent{
+  width: 400px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.star{
+  width: 20px;
+}
+
+.ratingText{
+  color: #E14D2A;
+}
+
+.safetyContent{
+  font-size: 20px;
+}
+
+.labelRatings{
+  font-size: 20px;
+}
+
+.reviewBtn{
+  background-color: #E14D2A;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+
+}
+
+.reviewsForm{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.carModelGarage{
+  font-size: 20px;
+  color: white;
+}
+
+.carMakeGarage{
+  font-size: 20px;
+  color: #E14D2A;
+  margin-top: 21px;
+  margin-right: 10px;;
+  text-transform: uppercase;
+
+}
+
+.garagecarInfo{
+  display: flex;
+}
+
+.editBtn{
+  background-color: #E14D2A;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  /* margin-right: 10px; */
+  float: right;
+}
+
+.inputDetails{
+  padding-bottom: 100px;
+  width: 200px;
+}
+.inputDetails1{
+  width: 200px;
+}
+
+.reviewBtnPage{
+  background-color: #E14D2A;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  margin-right: 0;
+  float: right;
+}
+
+.reviewComment{
+width: 400px;
+padding-bottom: 200px;
+}
+
+.carYearInput{
+  width: 200px;
+}
+.carModelInput{
+  width: 200px;
+}
+.carMakelInput{
+  width: 200px;
+}
+
+.safetyTitle{
+  text-align: center;
+}
+
+.carImageOnSale{
+  max-width: 400px;
+}
+
+.carDescriptionGarage{
+  max-width: 400px;
+}
+
+.description1{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: solid 1px white;
+  padding: 20px;
+}
+
+.editInput{
+  width: 200px;
+}
+.editInput1{
+  width: 200px;
+  padding-bottom: 100px;
+}
+
+.imageDetailsBox{
+  height: 100px;
+}
+
+.carImages{
+  display: flex;
+  justify-content: center;  
+}
+
+.carImageOnSale{
+  width: 200px;
+  margin-right: 10px;
 }
