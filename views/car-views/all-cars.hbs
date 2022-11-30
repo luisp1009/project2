@@ -13,9 +13,9 @@
     <br>
     </div>
     <div class="carImages">
-    <img class="carImageOnSale" src="{{imageUrl}}" alt="car image">
-    <img class="carImageOnSale" src="{{imageUrl1}}" alt="car image">
-    <img class="carImageOnSale" src="{{imageUrl2}}" alt="car image">
+   {{#if imageUrl}} <img class="carImageOnSale" src="{{imageUrl}}" alt="car image">{{/if}}
+    {{#if imageUrl1}}<img class="carImageOnSale" src="{{imageUrl1}}" alt="car image">{{/if}}
+   {{#if imageUrl2}}<img class="carImageOnSale" src="{{imageUrl2}}" alt="car image">{{/if}}
 </div>
 <div class="description1"> <p class="carDescriptionGarage" >{{details}}</p></div>
     {{#each reviews}}

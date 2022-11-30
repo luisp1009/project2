@@ -17,7 +17,7 @@ router.get('/create-car', isLoggedIn,  (req, res, next) => {
 })
 
 router.post('/create-car', isLoggedIn, (req, res, next) => {
-    if (!req.body.make || !req.body.model || !req.body.details || !req.body.year || !req.body.imageUrl || !req.body.imageUrl1 || !req.body.imageUrl2)
+    if (!req.body.make || !req.body.model || !req.body.details || !req.body.year)
     {
         res.render('car-views/create-car.hbs', {message: "All fields are required to list a car"})
         return;

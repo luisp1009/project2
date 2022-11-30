@@ -118,6 +118,7 @@ a{
   color: white;
   border: none;
   padding: 5px 10px;
+  
 
 }
 
@@ -243,8 +244,9 @@ a{
 }
 
 .inputDetails{
-  padding-bottom: 100px;
-  width: 200px;
+  height: 200px;
+  width: 205px;
+  margin-left: 90px;
 }
 .inputDetails1{
   width: 200px;
@@ -279,10 +281,6 @@ padding-bottom: 200px;
   text-align: center;
 }
 
-.carImageOnSale{
-  max-width: 400px;
-}
-
 .carDescriptionGarage{
   max-width: 400px;
 }
@@ -308,14 +306,22 @@ padding-bottom: 200px;
 
 .carImages{
   display: flex;
-  justify-content: center;  
-}
 
-.carImageOnSale{
-  width: 200px;
-  margin-right: 10px;
 }
 
 .carImageOnSale:hover{
-  transform: scale(1.5);
+  transform: scale(2);
+
+}
+
+.carImageOnSale{
+  width: 150px;
+  margin-right: 10px;
+
+}
+
+
+.carDetailsLabel{
+  position: absolute;
+  margin-right: 100px;
 }
