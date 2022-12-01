@@ -24,11 +24,10 @@
         <p>- {{comment}}</p>
         <br>
     {{/each}}
+    
 <div class="reviewsForm">
-    <form action="/reviews/{{_id}}/add-reviews" method="get">
-        <button class="reviewBtn">Add Review</button>
-    </form>
-
+    
+{{#if isOwner}}
     <form action="/cars/{{_id}}/edit-car" method="get">
         <button class="reviewBtn" type="submit">Edit</button>
     </form>
@@ -36,6 +35,17 @@
     <form action="/cars/{{_id}}/delete-car" method="post">
         <button class="reviewBtn" type="submit">Delete</button>
     </form>
+{{/if}}
+
+{{#unless isOwner}}
+<form action="/reviews/{{_id}}/add-reviews" method="get">
+        <button class="reviewBtn">Add Review</button>
+    </form>
+
+    <form  method="POST" action="mailto:{{owner.email}}?subject=Please send me more info" 
+enctype="multipart/form-data">
+<button class="reviewBtn" type="submit">Email for questions</button>
+{{/unless}}
     </div>
 <br><br><br>
 <hr style="width: 200px;" >

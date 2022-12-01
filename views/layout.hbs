@@ -18,8 +18,16 @@
     <li><a href="/cars/search-car">Safety check |</a></li>
     <li><a href="/cars/cars-list">Cars on Sale</a></li>
     
+
+    
+    {{#if user}}
+      <li>
+     <a class="userNameOnPage" href="#"> <b> {{user.userName}}</b></a> 
+      </li>
+      {{/if}}
+
     {{#if isLoggedIn}}
-    <li><a style="color:white; padding:5px; background-color:#E14D2A;" href="/auth/logout">Logout</a></li>
+    <li><a class="logoutBtnOnPage" style="color:white; padding:5px; background-color:#E14D2A;" href="/auth/logout">Logout</a></li>
     {{/if}}
   </ul>
 </nav>

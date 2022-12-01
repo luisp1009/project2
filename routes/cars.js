@@ -51,7 +51,16 @@ router.get('/cars-list', (req, res, next) => {
             path: "user",
         },
     })
+    .populate('owner')
     .then((foundCars) => {
+        console.log(foundCars)
+        foundCars = foundCars.map(car => {
+            return {
+                ...car._doc,
+                isOwner: String(car.owner._id) === String(req.session.user._id) 
+            }
+        })
+        
         res.render('car-views/all-cars.hbs', {foundCars})
     })
     .catch((err) => {

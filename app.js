@@ -41,6 +41,16 @@ app.use((req, res, next) => {
 //   },
 //   });
 
+//this method checks if there is a current sessinon and user, if true, send it to locals which
+//can be accessed by handlebars
+app.use((req, res, next) => {
+  if(req.session.user){
+    console.log(req.session.user)
+    res.locals.user = req.session.user;
+  }
+  next()
+})
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);
