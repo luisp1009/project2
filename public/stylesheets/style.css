@@ -246,10 +246,10 @@ a{
 .inputDetails{
   height: 200px;
   width: 205px;
-  margin-left: 90px;
+  margin-left: 120px;
 }
 .inputDetails1{
-  width: 200px;
+  margin-left: 115px;
 }
 
 .reviewBtnPage{
@@ -282,13 +282,13 @@ padding-bottom: 200px;
 }
 
 .carDescriptionGarage{
-  max-width: 400px;
+  max-width: 500px;
 }
 
 .description1{
   margin-top: 20px;
   margin-bottom: 20px;
-  border: solid 1px white;
+  border: dotted 0.5px white;
   padding: 20px;
 }
 
@@ -298,6 +298,7 @@ padding-bottom: 200px;
 .editInput1{
   width: 200px;
   padding-bottom: 100px;
+  margin-left: 150px;
 }
 
 .imageDetailsBox{
@@ -310,18 +311,51 @@ padding-bottom: 200px;
 }
 
 .carImageOnSale:hover{
-  transform: scale(2);
-
+  transform: scale(2.5);
+  display: block;
+  max-width:230px;
+  max-height:95px;
+  width: auto;
+  height: auto;
+  margin: 0;
+  
 }
 
-.carImageOnSale{
-  width: 150px;
-  margin-right: 10px;
 
+
+.carImageOnSale{
+  width: 110px;
+  margin-right: 10px;
+  
+  
 }
 
 
 .carDetailsLabel{
   position: absolute;
   margin-right: 100px;
+}
+
+.multipleImages{
+  color:  #E14D2A;
+}
+
+.editLabel{
+  position: absolute;
+  margin-right: 100px;
+
+}
+
+.inputDetailscCarYear{
+  margin-left: 50px;
+}
+.inputDetailsCarModel{
+  margin-left: 37px;
+}
+.inputDetailsCarMake{
+  margin-left: 46px;
+}
+
+.inputDetailsCarImages{
+  margin-left: 67px;
 }

@@ -5,41 +5,42 @@
 
 
 <br>
-<form action="/cars/create-car" method="post">
+<form action="/cars/create-car" method="post" enctype="multipart/form-data">
 
 <div>
 <label for="make">CAR MAKE</label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="inputDetails1" type="text" name="make" id="make">
+<input class="inputDetailsCarMake" type="text" name="make" id="make">
 </div>
 <br>
 <div>
 <label for="model">CAR MODEL</label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="inputDetails1" type="text" name="model" id="model">
+<input class="inputDetailsCarModel" type="text" name="model" id="model">
 </div>
 <br>
 <div>
 <label for="year">CAR YEAR</label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="inputDetails1" type="text" name="year" id="year">
+<input class="inputDetailscCarYear" type="text" name="year" id="year">
 </div>
 <br>
 <div>
-<label for="imageUrl">IMAGE1</label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="inputDetails1" type="text" name="imageUrl" id="imageUrl">
+<label for="imageUrl">IMAGES</label>
+<input class="inputDetailsCarImages" type="file" name="imageUrl" id="imageUrl" multiple>
+<br><p class="multipleImages" >You can upload multiple images at once</p>
 </div>
-<br>
+{{!-- <br>
 <div>
 <label for="imageUrl1">IMAGE2</label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="inputDetails1" type="text" name="imageUrl1" id="imageUrl1">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="inputDetails1" type="file" name="imageUrl" id="imageUrl1">
 </div>
 <br>
 <div>
 <label for="imageUrl2">IMAGE3</label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="inputDetails1" type="text" name="imageUrl2" id="imageUrl2">
-</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="inputDetails1" type="file" name="imageUrl" id="imageUrl2">
+</div> --}}
 <br>
 <div>
 <label class="carDetailsLabel" for="details">CAR DETAILS</label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea class="inputDetails" type="text" name="details" id="details" cols="30" rows="4"></textarea>
+<textarea class="inputDetails" type="text" name="details" id="details" cols="30" rows="4"></textarea>
 </div>
 <br>
 

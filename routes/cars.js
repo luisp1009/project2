@@ -4,6 +4,7 @@ const {isLoggedIn, isAnon} = require('../middleware/isLoggedIn')
 const isOwner = require('../middleware/isOwner')
 const Car = require('../models/Car.model')
 const Review = require('../models/Review.model');
+const fileUploader = require('../config/cloudinary.config');
 
 router.get('/search-car', isLoggedIn,  (req, res, next) => {
     res.render('index.hbs')
@@ -16,21 +17,19 @@ router.get('/create-car', isLoggedIn,  (req, res, next) => {
         return;
 })
 
-router.post('/create-car', isLoggedIn, (req, res, next) => {
+router.post('/create-car', isLoggedIn, fileUploader.array('imageUrl'), (req, res, next) => {
     if (!req.body.make || !req.body.model || !req.body.details || !req.body.year)
     {
         res.render('car-views/create-car.hbs', {message: "All fields are required to list a car"})
         return;
     }
-
+    console.log(req.files)
     Car.create ({
         make: req.body.make,
         model: req.body.model,
         details: req.body.details,
         year: req.body.year,
-        imageUrl: req.body.imageUrl,
-        imageUrl1: req.body.imageUrl1,
-        imageUrl2: req.body.imageUrl2,
+        imageUrlArray: req.files.map(e => e.path),
         owner: req.session.user._id
     })
     .then((createdCar) => {
@@ -41,6 +40,8 @@ router.post('/create-car', isLoggedIn, (req, res, next) => {
         console.log(err)
     });
 })
+
+
 
 router.get('/cars-list', (req, res, next) => {
     Car.find()

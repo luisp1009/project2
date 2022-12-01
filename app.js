@@ -33,6 +33,14 @@ app.use((req, res, next) => {
   next()
 })
 
+//Setting storage engine
+// const storageEngine = multer.diskStorage({
+//   destination: "./images",
+//   filename: (req, file, cb) => {
+//   cb(null, `${Date.now()}--${file.originalname}`);
+//   },
+//   });
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);

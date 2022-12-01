@@ -13,9 +13,10 @@
     <br>
     </div>
     <div class="carImages">
-   {{#if imageUrl}} <img class="carImageOnSale" src="{{imageUrl}}" alt="car image">{{/if}}
-    {{#if imageUrl1}}<img class="carImageOnSale" src="{{imageUrl1}}" alt="car image">{{/if}}
-   {{#if imageUrl2}}<img class="carImageOnSale" src="{{imageUrl2}}" alt="car image">{{/if}}
+        {{#each imageUrlArray}}
+            <img class="carImageOnSale" src="{{this}}" alt="car image">
+        {{/each}}
+   
 </div>
 <div class="description1"> <p class="carDescriptionGarage" >{{details}}</p></div>
     {{#each reviews}}
